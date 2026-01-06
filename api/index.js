@@ -1,7 +1,9 @@
+// File: api/index.js
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
 
+// Path ini benar JIKA file ini ada di dalam folder 'api'
 const jaringanRoutes = require("../src/routes/jaringanRoutes");
 const zoomRoutes = require("../src/routes/zoomRoutes");
 const arsipRoutes = require("../src/routes/arsipRoutes");
