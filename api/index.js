@@ -7,6 +7,7 @@ require("dotenv").config();
 const jaringanRoutes = require("../src/routes/jaringanRoutes");
 const zoomRoutes = require("../src/routes/zoomRoutes");
 const arsipRoutes = require("../src/routes/arsipRoutes");
+const authRoutes = require("../src/routes/authRoutes"); // <-- TAMBAHAN: Import route auth
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.use(cors());
 app.use(express.json());
 
 // Main Routes
+app.use("/api/auth", authRoutes); // <-- TAMBAHAN: Endpoint Login/Register
 app.use("/api/jaringan", jaringanRoutes);
 app.use("/api/zoom", zoomRoutes);
 app.use("/api/arsip", arsipRoutes);
